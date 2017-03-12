@@ -24,18 +24,18 @@
         <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
       </div>
     </div>
-   <!--  <form id="questionSelectForm" role="form">
+    <form id="questionSelectForm" role="form">
        <div class="form-group">
           <label for="typeQuestion">Choose which movie to search for character likeness:</label>
            <select class="form-control" id="typeQuestion">
-            <option>Lord Of The Rings</option>
+           <!--  <option>Lord Of The Rings</option>
             <option>Harry Potter</option>
-            <option>X-men</option>
-            <option>Star Wars</option>
+            <option>X-Men</option>
+            <option>Star Wars</option> -->
           </select>
         </div>
         <button type="button" class="btn btn-lg btn-default" id="typeSubmit">Start</button>
-    </form> -->
+    </form>
 
     <div class="row">
       <div class="col-lg-12">
@@ -200,6 +200,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- onclick="location.reload();" -->
         </div>
       </div>
 
@@ -236,32 +237,13 @@
   $('#errorModal').modal('hide');
   // var movie = "";
     var arrayOfAnswers = [];
+    var characterListType = "";
 
-    // $("#typeSubmit").on("click", function(event) {
-    //     event.preventDefault();
-    //     var characterListType = $("#typeQuestion>option:selected");
-    //     switch(characterListType) {
-    //       case "Lord Of The Rings":
-    //         movie =
-    //         break;
-
-    //       case "Harry Potter":
-
-    //         break;
-
-    //       case "X-men":
-
-    //         break;
-
-    //       case "Star Wars":
-
-    //         break;
-
-    //       default:
-
-    //         break;
-    //     }
-    // });
+    $("#typeSubmit").on("click", function(event) {
+        event.preventDefault();
+        characterListType = $("#typeQuestion>option:selected").val();
+        // console.log(characterListType);
+    });
 
     // On click of submit button,
     $(".submit").on("click", function(event) {
@@ -281,11 +263,11 @@
       var newUserData = {
         name: $("#name").val().trim(),
         pic: $("#photo").val().trim(),
+        type: characterListType,
         stats: arrayOfAnswers
       };
-      console.log("Hello");
+
       // POST to add new data to array of existing data
-      // TODO: figure out what to do here
       $.post("/api/friends", newUserData,
         function(data) {
           // Data received from res.json in apiRoutes.js
@@ -303,9 +285,25 @@
           console.log("----");
 
           // Clear the form when submitting ???
-          // location.reload(true);
         });
     }
+  });
+
+  $(document).ready(function() {
+    var movieSet = new Set();
+    $.ajax({
+      url: "/api/friends",
+      method: "GET"
+    }).done(function(data) {
+      // To get unique values of key type from objects in friends.js
+      data.forEach(item => movieSet.add(item.type));
+      // creating options dynamically
+      movieSet.forEach(function(item) {
+        var newOption = $("<option>");
+        newOption.text(item);
+        $("#typeQuestion").append(newOption);
+      });
+    });
   });
 
 </script>
