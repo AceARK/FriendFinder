@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Survey</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+ 
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Your Kindred Spirit</h1>
+      <hr>
+      <h2 class="text-center">Take the survey below to find your kindred spirit</h2>
+      <br>
+
+      <div class="text-center">
+        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+      </div>
+    </div>
+   <!--  <form id="questionSelectForm" role="form">
+       <div class="form-group">
+          <label for="typeQuestion">Choose which movie to search for character likeness:</label>
+           <select class="form-control" id="typeQuestion">
+            <option>Lord Of The Rings</option>
+            <option>Harry Potter</option>
+            <option>X-men</option>
+            <option>Star Wars</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-lg btn-default" id="typeSubmit">Start</button>
+    </form> -->
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Reservation Page -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Survey</h4>
+          </div>
+          <div class="panel-body">
+
+            <form id="formData" role="form">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="photo">Photo</label>
+                <input type="text" class="form-control" id="photo" required>
+              </div>
+
+               <div class="form-group">
+                <label for="quest1">Question 1</label>
+                 <select class="surveyQuestion form-control" id="quest1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest2">Question 2</label>
+                 <select class="surveyQuestion form-control" id="quest2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest3">Question 3</label>
+                 <select class="surveyQuestion form-control" id="quest3">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest4">Question 4</label>
+                 <select class="surveyQuestion form-control" id="quest4">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                   <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest5">Question 5</label>
+                 <select class="surveyQuestion form-control" id="quest5">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest6">Question 6</label>
+                 <select class="surveyQuestion form-control" id="quest6">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest7">Question 7</label>
+                 <select class="surveyQuestion form-control" id="quest7">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest8">Question 8</label>
+                <select class="surveyQuestion form-control" id="quest8">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest9">Question 9</label>
+                <select class="surveyQuestion form-control" id="quest9">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="quest10">Question 10</label>
+                <select class="surveyQuestion form-control" id="quest10">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+    <div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h2 class="modal-title"><strong>You are most like: </strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="kindredName"></h2>
+          <img id="kindredPhoto" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+   <div id="errorModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+         <!-- Error Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h2 class="modal-title"><strong>Incomplete Form Submission</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="message"></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+</body>
+</html>
+
+<!-- Code to post data on click of Submit button -->
+<script type="text/javascript">
+  $('#resultsModal').modal('hide');
+  $('#errorModal').modal('hide');
+  // var movie = "";
+    var arrayOfAnswers = [];
+
+    // $("#typeSubmit").on("click", function(event) {
+    //     event.preventDefault();
+    //     var characterListType = $("#typeQuestion>option:selected");
+    //     switch(characterListType) {
+    //       case "Lord Of The Rings":
+    //         movie =
+    //         break;
+
+    //       case "Harry Potter":
+
+    //         break;
+
+    //       case "X-men":
+
+    //         break;
+
+    //       case "Star Wars":
+
+    //         break;
+
+    //       default:
+
+    //         break;
+    //     }
+    // });
+
+    // On click of submit button,
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      if($("#name").val() == "" || $("#photo").val() == "") {
+        $('#message').html("Missing fields - Name and Photo are required.");
+        $('#errorModal').modal('show');
+      }else {
+        // Getting user's selection for each question
+       $(".surveyQuestion>option:selected").each(function() {
+          var selected = $(this).val();
+          arrayOfAnswers.push(selected);
+        });
+
+      // Here we grab the form elements
+      var newUserData = {
+        name: $("#name").val().trim(),
+        pic: $("#photo").val().trim(),
+        stats: arrayOfAnswers
+      };
+      console.log("Hello");
+      // POST to add new data to array of existing data
+      // TODO: figure out what to do here
+      $.post("/api/friends", newUserData,
+        function(data) {
+          // Data received from res.json in apiRoutes.js
+          console.log(data);
+          // Printing out data
+          console.log("----");
+          console.log("Data name: " + data.name);
+          console.log("Data pic: " + data.pic);
+          console.log("----");
+          $("#kindredName").text(data.name);
+          $("#kindredPhoto").attr("src", data.pic);
+           $('#resultsModal').modal('show');
+          console.log("Kindred name: " + $("#kindredName").text());
+          console.log("Kindred pic: " + $("#kindredPhoto").attr("src"));
+          console.log("----");
+
+          // Clear the form when submitting ???
+          // location.reload(true);
+        });
+    }
+  });
+
+</script>
