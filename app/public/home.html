@@ -4,31 +4,37 @@
   <meta charset="UTF-8">
   <title>Friend Finder Home</title>
 
-  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./assets/reset.css">
+  <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- Font awesome cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
  
   <div class="container">
 
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Your Kindred Spirit</h1>
-      <hr>
-      <h2 class="text-center">Click the button to take the survey and find out whom you are most like.</h2>
+    <div id="headingMain">
+      <h1 id="mainHeading" class="text-center"><span class="glyphicon glyphicon-fire"></span> Find your Kindred Spirit <span class="glyphicon glyphicon-fire"></span></h1>
+      <h2 class="text-center">Find out which of your favorite movie's characters you are most like.</h2>
+      <!-- <h2 class="text-center">Find out which of your favorite movie's characters you are most like.</h2> -->
       <br>
 
       <div class="text-center">
-        <a href="/survey"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span>Take survey</button></a>
+        <a href="/survey"><button type="button" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-list-alt"></span> Click here to start</button></a>
       </div>
 
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
-      </div>
-    </footer> 
+    <div class="container">
+      <p><a class="hyperLink" href="/api/friends">API Friends List</a>  <span id="githubLink"><a class="hyperLink" href="#">GitHub Repo</a></span></p>
+    </div>
+  </footer>
 
   </div>
 

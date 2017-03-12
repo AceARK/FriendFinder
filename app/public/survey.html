@@ -4,168 +4,184 @@
   <meta charset="UTF-8">
   <title>Friend Finder Survey</title>
 
+  
+  <link rel="stylesheet" href="./assets/reset.css">
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- Font awesome cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
- 
-  <div class="container">
-
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Your Kindred Spirit</h1>
-      <hr>
-      <h2 class="text-center">Take the survey below to find your kindred spirit</h2>
-      <br>
-
-      <div class="text-center">
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
-      </div>
-    </div>
-    <form id="questionSelectForm" role="form">
-       <div class="form-group">
-          <label for="typeQuestion">Choose which movie to search for character likeness:</label>
-           <select class="form-control" id="typeQuestion">
-          </select>
+  <div class=row>
+        <div class="col-xs-12 col-sm-1 col-sm-offset-11 col-md-1 col-md-offset-11">
+          <a href="/"><button type="button" class="home btn btn-lg btn-success"><i class="glyphicon glyphicon-home"></i> Home</button></a>
         </div>
-        <button type="button" class="btn btn-lg btn-default" id="typeSubmit">Start</button>
-    </form>
+        <div class="heading col-xs-12">
+          <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Find your Kindred Spirit <span class="glyphicon glyphicon-fire"></span></h1>
+        </div>
+      </div>
+  <div class="container-fluid">
+  <div class="container text-center">
+
+   <div id="movieChoicePanel" class="panel panel-info">
+      <div class="panel-heading">
+            <h2 class="panel-title">Movie Choice</h2>
+      </div>
+      <div class="panel-body">
+        <form role="form">
+           <div class="form-group">
+              <label for="typeQuestion">Choose which movie to search for character likeness:</label>
+               <select class="form-control" id="typeQuestion">
+              </select>
+            </div>
+            <button type="button" class="btn btn-lg btn-success" id="typeSubmit">Start</button>
+        </form>
+      </div>
+  </div>
 
     <div class="row">
       <div class="col-lg-12">
 
-        <!-- Reservation Page -->
-        <div class="panel panel-default">
+        <!-- Survey questions -->
+        <div id="surveyPanel" class="panel panel-info">
           <div class="panel-heading">
-            <h4 class="panel-title">Survey</h4>
+            <h2 class="panel-title">Survey</h2>
           </div>
           <div class="panel-body">
 
             <form id="formData" role="form">
+              <div id="userDetails">
+                <div class="form-group">
+                  <label for="name">Enter your name:</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
 
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <div class="form-group">
+                  <label for="photo">Enter a link to your photo:</label>
+                  <input type="text" class="form-control" id="photo" required>
+                </div>
+
+                <button type="submit" id="displayQuestions" class="btn btn-lg btn-success">Get my Questions</button>
               </div>
 
-              <div class="form-group">
-                <label for="photo">Photo</label>
-                <input type="text" class="form-control" id="photo" required>
-              </div>
+              <div id="surveyQuestions" class="text-center">
+                <!-- <div class="text-left"> -->
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest1">You are a calm and collected person, even in the face of danger.</label>
+                   <select class="surveyQuestion form-control" id="quest1">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Sometimes)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Yes, all the time)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest1">You are a calm and collected person, even in the face of danger.</label>
-                 <select class="surveyQuestion form-control" id="quest1">
-                  <option value="1">1 (Never)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Sometimes)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Yes, all the time)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest2">If someone yelled at you for no reason, would you attack them back?</label>
+                   <select class="surveyQuestion form-control" id="quest2">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Maybe, depending on the situation)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Definitely)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest2">If someone yelled at you for no reason, would you attack them back?</label>
-                 <select class="surveyQuestion form-control" id="quest2">
-                  <option value="1">1 (Never)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Maybe, depending on the situation)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Definitely)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest3">If you were asked to give up something you love, would you?</label>
+                   <select class="surveyQuestion form-control" id="quest3">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Maybe, depending on it's value)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Definitely)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest3">If you were asked to give up something you love, would you?</label>
-                 <select class="surveyQuestion form-control" id="quest3">
-                  <option value="1">1 (Never)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Maybe, depending on it's value)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Definitely)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest4">Would you prefer to spend most of your weekends at home doing fun activities on your own?</label>
+                   <select class="surveyQuestion form-control" id="quest4">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Sometimes)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Definitely)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest4">Would you prefer to spend most of your weekends at home doing fun activities on your own?</label>
-                 <select class="surveyQuestion form-control" id="quest4">
-                  <option value="1">1 (Never)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Sometimes)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Definitely)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest5">Do you lie frequently?</label>
+                   <select class="surveyQuestion form-control" id="quest5">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Sometimes, depending on the situation)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Yes, unfortunately, but harmless ones)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest5">Do you lie frequently?</label>
-                 <select class="surveyQuestion form-control" id="quest5">
-                  <option value="1">1 (Never)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Sometimes, depending on the situation)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Yes, unfortunately, but harmless ones)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest6">Would you donate to charity the minute you could afford it?</label>
+                   <select class="surveyQuestion form-control" id="quest6">
+                    <option value="1">1 (No way!)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Maybe)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Yes ofcourse!) </option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest6">Would you donate to charity the minute you could afford it?</label>
-                 <select class="surveyQuestion form-control" id="quest6">
-                  <option value="1">1 (No way!)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Maybe)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Yes ofcourse!) </option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest7">How many close friends do you have?</label>
+                   <select class="surveyQuestion form-control" id="quest7">
+                    <option value="1">1 (None)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (A handful)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (A whole lot!)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest7">How many close friends do you have?</label>
-                 <select class="surveyQuestion form-control" id="quest7">
-                  <option value="1">1 (None)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (A handful)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (A whole lot!)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest8">You love animals (wild and domestic)</label>
+                  <select class="surveyQuestion form-control" id="quest8">
+                    <option value="1">1 (Nope, I'll pass)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Some pets and a few wild)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Yess! All animals!!)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest8">You love animals (wild and domestic)</label>
-                <select class="surveyQuestion form-control" id="quest8">
-                  <option>1 (Nope, I'll pass)</option>
-                  <option>2</option>
-                  <option>3 (Some pets and a few wild)</option>
-                  <option>4</option>
-                  <option>5 (Yess! All animals!!)</option>
-                </select>
-              </div>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest9">Would you kill somebody for a million dollars?</label>
+                  <select class="surveyQuestion form-control" id="quest9">
+                    <option value="1">1 (Never)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (Maybe, is he/she bad?)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (A million dollars!! Sure why not?)</option>
+                  </select>
+                </div>
 
-               <div class="form-group">
-                <label for="quest9">Would you kill somebody for a million dollars?</label>
-                <select class="surveyQuestion form-control" id="quest9">
-                  <option>1 (Never)</option>
-                  <option>2</option>
-                  <option>3 (Maybe, is he/she bad?)</option>
-                  <option>4</option>
-                  <option>5 (A million dollars!! Sure why not?)</option>
-                </select>
+                 <div class="questionDiv form-group">
+                  <label class="text-left" for="quest10">Do you like snakes?</label>
+                  <select class="surveyQuestion form-control" id="quest10">
+                    <option value="1">1 (Eeeeee Nooo, keep them away from me!!)</option>
+                    <option value="2">2</option>
+                    <option value="3">3 (I don't mind them but I don't like them)</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Oooh yes! They're fascinating and I love them!)</option>
+                  </select>
+                </div>
+              <!-- </div> -->
+                <button type="submit" class="btn btn-lg btn-success submit">Find my Kindred</button>
               </div>
-
-               <div class="form-group">
-                <label for="quest10">Do you like snakes?</label>
-                <select class="surveyQuestion form-control" id="quest10">
-                  <option value="1">1 (Eeeeee Nooo, keep them away from me!!)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (I don't mind them but I don't like them)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Oooh yes! They're fascinating and I love them!)</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn btn-primary submit">Submit</button>
             </form>
 
           </div>
@@ -173,15 +189,9 @@
 
       </div>
     </div>
+  </div>
 
-
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
-      </div>
-    </footer>
-
-    <div id="resultsModal" class="modal fade" role="dialog">
+    <div id="resultsModal" class="text-center modal fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -195,26 +205,26 @@
           <img id="kindredPhoto" src="" alt="">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="location.reload();" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" onclick="location.reload();" data-dismiss="modal">Close</button>
         </div>
       </div>
 
     </div>
   </div>
 
-   <div id="errorModal" class="modal fade" role="dialog">
+   <div id="errorModal" class="modal fade text-center" role="dialog">
     <div class="modal-dialog">
          <!-- Error Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-lg fa-times-circle-o" aria-hidden="true"></i></button>
           <h3 class="modal-title">Incomplete Form Submission</h3>
         </div>
         <div class="modal-body">
           <h2 id="message"></h2>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
       </div>
 
@@ -223,6 +233,12 @@
 
   </div>
 
+</div>
+  <footer class="footer">
+    <div class="container">
+      <p><a class="hyperLink" href="/api/friends">API Friends List</a>  <span id="githubLink"><a class="hyperLink" href="#">GitHub Repo</a></span></p>
+    </div>
+  </footer>
 </body>
 </html>
 
@@ -230,14 +246,43 @@
 <script type="text/javascript">
   $('#resultsModal').modal('hide');
   $('#errorModal').modal('hide');
-  // var movie = "";
+  $("#surveyPanel").hide();
+
     var arrayOfAnswers = [];
     var characterListType = "";
 
     $("#typeSubmit").on("click", function(event) {
         event.preventDefault();
         characterListType = $("#typeQuestion>option:selected").val();
-        // console.log(characterListType);
+        switch(characterListType) {
+          case "Lord of The Rings":
+            $("body").attr("background", "black url('http://www.chinaeholiday.com/data/out/29/4942690-lord-of-the-rings-wallpapers.jpg') no-repeat center center fixed");
+            break;
+
+          case "Harry Potter":
+             $("body").attr("background", "black url('https://s-media-cache-ak0.pinimg.com/originals/d5/5e/81/d55e818ef7c3bb0d1f5ad997346d7e5f.jpg') no-repeat center center fixed");
+            break;
+
+          case "X-Men":
+             $("body").attr("background", "black url('http://www.adweek.com/files/blogs/xmen_coldwell.png') no-repeat center center fixed");
+            break;
+
+          case "Star Wars":
+             $("body").attr("background", "black url('https://s-media-cache-ak0.pinimg.com/originals/34/98/7f/34987f583b040955705876d62a32edd8.jpg') no-repeat center center fixed");
+            break;
+
+          default:
+            break;
+        }
+        $("#movieChoicePanel").hide();
+        $("#surveyQuestions").hide();
+        $("#surveyPanel").show();
+    });
+
+    $("#displayQuestions").on("click", function(event) {
+      event.preventDefault();
+      $("#userDetails").hide();
+      $("#surveyQuestions").show();
     });
 
     // On click of submit button,
@@ -250,7 +295,7 @@
       }else {
         // Getting user's selection for each question
        $(".surveyQuestion>option:selected").each(function() {
-          var selected = $(this).val();
+          var selected = $(this).attr("value");
           arrayOfAnswers.push(selected);
         });
 
