@@ -52,6 +52,7 @@ body {
 
 .hyperLink {
 	color: #7fffdd;
+	text-shadow: 2px 2px 3px #124c3d;
 	font-size: 20px;
 	padding: 20px;
 }
