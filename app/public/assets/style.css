@@ -80,10 +80,14 @@ body {
 	display: none;
 }
 
-/*.modal button {
-	margin: 0 auto;
-}*/
-
 .modal i {
 	color: red;
+}
+
+#kindredPhoto {
+	height: 400px;
+}
+
+button:focus,button:active {
+	outline: none !important;
 }
