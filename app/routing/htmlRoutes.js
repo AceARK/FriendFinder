@@ -7,6 +7,10 @@ module.exports = function(app) {
 	app.get("/survey",function(req, res) {
 		res.sendFile(path.join(__dirname, "/../public/survey.html"));
 	});
+	// CSS routes
+	app.get("/assets/:route", function(req, res) {
+		res.sendFile(path.join(__dirname, "/../public/assets/" + req.params.route));
+	});
 	// USE to link home.html to / and use as default homepage
 	app.use(function(req, res) {
 		res.sendFile(path.join(__dirname, "/../public/home.html"));

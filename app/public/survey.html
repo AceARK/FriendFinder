@@ -5,10 +5,10 @@
   <title>Friend Finder Survey</title>
 
   
-  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="/assets/reset.css">
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="/assets/style.css">
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -197,15 +197,15 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h2 class="modal-title"><strong>You are most like: </strong></h2>
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-lg fa-times-circle-o" aria-hidden="true"></i></button>
+          <h2 class="modal-title"><strong>You are most like </strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="kindredName"></h2>
           <img id="kindredPhoto" src="" alt="">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" onclick="location.reload();" data-dismiss="modal">Close</button>
+        <div class="text-center modal-footer">
+          <button type="button" class="btn btn-lg btn-success center-block" onclick="location.reload();" data-dismiss="modal">Close</button>
         </div>
       </div>
 
@@ -218,13 +218,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><i class="fa fa-lg fa-times-circle-o" aria-hidden="true"></i></button>
-          <h3 class="modal-title">Incomplete Form Submission</h3>
+          <h4 class="modal-title">Incomplete Form Submission</h4>
         </div>
         <div class="modal-body">
-          <h2 id="message"></h2>
+          <h3 id="message"></h3>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-lg btn-danger center-block" data-dismiss="modal">Close</button>
         </div>
       </div>
 
@@ -246,7 +246,6 @@
 <script type="text/javascript">
   $('#resultsModal').modal('hide');
   $('#errorModal').modal('hide');
-  $("#surveyPanel").hide();
 
     var arrayOfAnswers = [];
     var characterListType = "";
@@ -256,19 +255,19 @@
         characterListType = $("#typeQuestion>option:selected").val();
         switch(characterListType) {
           case "Lord of The Rings":
-            $("body").attr("background", "black url('http://www.chinaeholiday.com/data/out/29/4942690-lord-of-the-rings-wallpapers.jpg') no-repeat center center fixed");
+            $("body").attr("style", "background: black url('http://www.chinaeholiday.com/data/out/29/4942690-lord-of-the-rings-wallpapers.jpg') no-repeat center center fixed;");
             break;
 
           case "Harry Potter":
-             $("body").attr("background", "black url('https://s-media-cache-ak0.pinimg.com/originals/d5/5e/81/d55e818ef7c3bb0d1f5ad997346d7e5f.jpg') no-repeat center center fixed");
+             $("body").attr("style", "background: black url('https://s-media-cache-ak0.pinimg.com/originals/d5/5e/81/d55e818ef7c3bb0d1f5ad997346d7e5f.jpg') no-repeat center center fixed;");
             break;
 
           case "X-Men":
-             $("body").attr("background", "black url('http://www.adweek.com/files/blogs/xmen_coldwell.png') no-repeat center center fixed");
+             $("body").attr("style", "background: black url('http://static.srcdn.com/wp-content/uploads/xavier-school-hatley-castle.jpg') no-repeat center center fixed;");
             break;
 
           case "Star Wars":
-             $("body").attr("background", "black url('https://s-media-cache-ak0.pinimg.com/originals/34/98/7f/34987f583b040955705876d62a32edd8.jpg') no-repeat center center fixed");
+             $("body").attr("style", "background: black url('http://vignette2.wikia.nocookie.net/starwars/images/6/66/Coruscant_landscape_RotS.png') no-repeat center center fixed;");
             break;
 
           default:
@@ -281,18 +280,18 @@
 
     $("#displayQuestions").on("click", function(event) {
       event.preventDefault();
-      $("#userDetails").hide();
-      $("#surveyQuestions").show();
+       if($("#name").val() == "" || $("#photo").val() == "") {
+        $('#message').html("Missing fields - Name and Photo required.");
+        $('#errorModal').modal('show');
+      }else {
+        $("#userDetails").hide();
+        $("#surveyQuestions").show();
+      }
     });
 
     // On click of submit button,
     $(".submit").on("click", function(event) {
       event.preventDefault();
-
-      if($("#name").val() == "" || $("#photo").val() == "") {
-        $('#message').html("Missing fields - Name and Photo are required.");
-        $('#errorModal').modal('show');
-      }else {
         // Getting user's selection for each question
        $(".surveyQuestion>option:selected").each(function() {
           var selected = $(this).attr("value");
@@ -326,7 +325,6 @@
 
           // Clear the form when submitting ???
         });
-    }
   });
 
   $(document).ready(function() {
