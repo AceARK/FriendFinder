@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
 </head>
 <body>
@@ -310,20 +311,9 @@
       $.post("/api/friends", newUserData,
         function(data) {
           // Data received from res.json in apiRoutes.js
-          console.log(data);
-          // Printing out data
-          console.log("----");
-          console.log("Data name: " + data.name);
-          console.log("Data pic: " + data.pic);
-          console.log("----");
           $("#kindredName").html("<strong>" + data.name + "</strong>");
           $("#kindredPhoto").attr("src", data.pic);
            $('#resultsModal').modal('show');
-          console.log("Kindred name: " + $("#kindredName").text());
-          console.log("Kindred pic: " + $("#kindredPhoto").attr("src"));
-          console.log("----");
-
-          // Clear the form when submitting ???
         });
   });
 
