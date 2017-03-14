@@ -1,7 +1,7 @@
 # FriendFinder
 ## Find your Kindred Spirit 
 
-### A Full-Stack web app developed with Node.js and Express.js
+### An almost Full-Stack web app developed with Node.js and Express.js
 
 Have you ever watched your favorite epic movie and wondered which character you would've been? Figure out who you are most like with this app.
 
