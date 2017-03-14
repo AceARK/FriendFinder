@@ -22,7 +22,7 @@ var friendsList = [
 	    "name":"Aragorn",
 	    "pic":"images/aragorn.jpg",
 	    "type":"Lord of The Rings",
-	    "description":"Compassionate yet strong-willed when it comes to fulfilling his destiny. Aragorn sought to keep his word to Frodo, and was not one to shy away from sacrifices.",
+	    "description":"Compassionate, yet strong-willed when it comes to fulfilling his destiny. His primary duty is towards his people and ancestors. Aragorn sought to keep his word to Frodo, and was not one to shy away from sacrifices.",
 	    "stats":[
          	4,
          	3,
@@ -40,7 +40,7 @@ var friendsList = [
 	    "name":"Gandalf",
 	    "pic":"images/gandalf.jpg",
 	    "type":"Lord of The Rings",
-	    "description":"Wise and powerful, and a friend to the Hobbits. Known by many names, Gandalf's mischeivous sense of humor belies the fact that he is one of the greatest powers of Middle Earth.",
+	    "description":"Wise and powerful, and a friend to the Hobbits. Known by many names, Gandalf's mischievous sense of humor and likable nature, belies the fact that he was one of the greatest powers of Middle Earth.",
 	    "stats":[
          	4,
          	2,
@@ -58,7 +58,7 @@ var friendsList = [
 		"name":"Harry Potter",
 	    "pic":"images/harryPotter.jpg",
 	    "type":"Harry Potter",
-	    "description":"Modest and unknown at first, Harry proves himself to be a brave and loyal fighter who rises to the challenge. His only downfall being his extreme impulsiveness.",
+	    "description":"Modest and unknown at first, Harry proves himself to be a brave and loyal fighter who rises to every challenge. His only downfall being, his extreme impulsiveness.",
 	    "stats":[
          	3,
          	3,
@@ -76,7 +76,7 @@ var friendsList = [
 		"name":"Ron Weasley",
 	    "pic":"images/ronWeasley.jpg",
 	    "type":"Harry Potter",
-	    "description":"Often overshadowed by his brothers or friends, Ron struggles with issues of self-worth. The state of his barely scraping by pureblood family doesn't help either. He'll still manage to make his friends laugh, and at the end of the day, is the most loyal friend any of them could ever have.",
+	    "description":"Often overshadowed by his brothers or friends, Ron struggles with issues of self-worth. The state of his barely scraping by pureblood family doesn't help either. He still manages to make his friends laugh, and at the end of the day, is the most loyal friend any of them could ever have.",
 	    "stats":[
          	1,
          	2,
@@ -94,7 +94,7 @@ var friendsList = [
 		"name":"Hermione Granger",
 	    "pic":"images/hermioneGranger.jpg",
 	    "type":"Harry Potter",
-	    "description":"A rule-follower with vast reserves of knowledge that are only matched by her stubborness and extraordinary skill at wizardry, for a muggle-born. She is loyal and brave and won't back away from any fight.",
+	    "description":"A rule-follower with vast reserves of knowledge that are only matched by her stubbornness and extraordinary skill at wizardry, despite coming from a non-wizarding family. She is loyal and brave and won't back away from any fight.",
 	    "stats":[
          	3,
          	5,
@@ -112,7 +112,7 @@ var friendsList = [
 		"name":"Draco Malfoy",
 	    "pic":"images/malfoy.jpg",
 	    "type":"Harry Potter",
-	    "description":"A pureblood treated as royalty, until all eyes turned toward Harry Potter, the boy who lived. He instantly made it his life's mission to taunt and trouble Harry and his friends. He always thought he would be on Lord Voldemort's side like his family, but the pride of becoming a Death Eater, soon turned to anxiousness and fear when it looked like it was more than he could bear.",
+	    "description":"A pureblood treated as royalty, until all eyes turned toward Harry Potter - 'the boy who lived'. Draco Malfoy instantly made it his life's mission to taunt and trouble Harry and his friends. He always thought he would be on Lord Voldemort's side like his family, but the pride of becoming a Death Eater, soon turned to fear and anguish when it became more than he could bear.",
 	    "stats":[
          	1,
          	1,
@@ -130,7 +130,7 @@ var friendsList = [
 		"name":"Charles Xavier",
 	    "pic":"images/profx.jpg",
 	    "type":"X-Men",
-	    "description":"Professor Xavier, as he is known by the students of his beloved 'School for Gifted Youngsters', believes that mankind and mutant-kind can co-exist if only they gave each other a chance. He believes he can transform soceity's fear of mutants to respect for mutants by asking mutants to serve and protect humans. Always the optimist, he is forgiving, gentle and believes in hope even where there seems to be none.",
+	    "description":"Professor Xavier, as he is known by the students of his beloved 'School for Gifted Youngsters', believes that mankind and mutant-kind can co-exist if only they gave each other a chance. He believes he can transform society's fear of mutants to respect, by asking mutants to use their power to help humans. Always the optimist, he is forgiving, gentle and believes in hope even where there seems to be none.",
 	    "stats":[
          	5,
          	1,
@@ -148,7 +148,7 @@ var friendsList = [
 		"name":"Jean Grey",
 	    "pic":"images/jeanGrey.jpg",
 	    "type":"X-Men",
-	    "description":"From an early age, Jean showed a talent for empathy. Her compassion is what caused the mighty cosmic 'Phoenix force' to notice her as her young mind struggled to hold on to her dying friend. Fearing that the power that bonded with her would endanger her and everything around her, Charles Xavier formed a barrier in her mind. She later grew to be someone who would sacrifice her life for her friends at the cost of her own.",
+	    "description":"From an early age, Jean showed a talent for empathy. Her compassion is what caused the mighty cosmic 'Phoenix force' to notice her as her young mind struggled to hold on to her dying friend. Fearing that the power that her powers would endanger her and everything else around her, Charles Xavier placed a barrier in her mind. She grew up to be someone who sacrificed her life for her friends at the cost of her own.",
 	    "stats":[
          	3,
          	3,
@@ -184,7 +184,7 @@ var friendsList = [
 		"name":"Eric Lehnsherr/ Magneto",
 	    "pic":"images/magneto.jpg",
 	    "type":"X-Men",
-	    "description":"Erik Lehnsherr, often characterized as being indifferent and uncaring, is really a deeply passionate creature, ruled by his heart. He is capable of great warmth and friendship, but it is his deep-set anger and hatred that drives him. Despite being cynical, he cares for his friend Charles, and hates that they have to be on opposite sides. He sees mankind as a menace to all mutants who he considers the next step in evolution.",
+	    "description":"Erik Lehnsherr, often characterized as being indifferent and uncaring, is in reality, deeply passionate and ruled by his heart. He is capable of great warmth and friendship, but all that is overshadowed by his deep-set anger and hatred. And it is exactly that which drives him. Despite being cynical, he cares greatly for his friend Charles, and hates that they have to be on opposite sides. Nevertheless, he sees mankind as an obsolete race, as opposed to mutants, whom he considers the next step in evolution.",
 	    "stats":[
          	5,
          	4,
@@ -203,7 +203,7 @@ var friendsList = [
 		"name":"Anakin Skywalker",
 	    "pic":"images/anakin.jpg",
 	    "type":"Star Wars",
-	    "description":"As a young child, Anakin showed an exceptional ability to use the Force, which he mysteriously has a strong link to. But after the loss of his mother, he felt fear that ruled the rest of his life. Joining the Jedi made him feel strong and gave him power, but he never felt it enough. He constantly sought to bend the ways of the Order to suit his needs. And when he felt the Jedi ways were too much of a hindrance, the Dark Side seemed to make more sense, with it's freedom and power. Anakin's vulnerability to the seduction of the Dark Side, shows that he feels human emotions strongly. And that is exactly what redeemed him in the end.",
+	    "description":"As a young child, Anakin showed an exceptional ability to use the Force, which he mysteriously has a strong link to. But after the loss of his mother, he felt fear that ruled the rest of his life. Joining the Jedi made him feel strong and honed his power, but he never felt it enough. He constantly sought to bend the ways of the Order to suit his needs. And when he felt the Jedi ways were too much of a hindrance, the Dark Side seemed to make more sense, with it's freedom and limitless use of power. Anakin's vulnerability to the seduction of the Dark Side, shows that he feels human emotions strongly. And that is exactly what redeemed him in the end.",
 	    "stats":[
          	4,
          	5,
@@ -222,7 +222,7 @@ var friendsList = [
 		"name":"Obi-Wan Kenobi",
 	    "pic":"images/obiwan.jpg",
 	    "type":"Star Wars",
-	    "description":"Obi-Wan is characterized as being a cautious, focussed and very traditional values of the typical Jedi. This often put him in conflict with his unorthodox master, Qui-Gon Jinn. Obi-Wan is thoughful, patient and weighs his options before setting out on a mission. Despite his power, he never felt pride, and wouldn't mind seeking help from other. He proves to be a true mentor, and one of the few who become a Force Ghost and guide Luke Skywalker.",
+	    "description":"Obi-Wan is characterized as being a cautious, focussed and very traditional - the values of a typical Jedi. This often put him in conflict with his unorthodox master, Qui-Gon Jinn. Obi-Wan is thoughtful, patient and weighs his options before setting out on a mission. Despite his power, he never felt pride, and wouldn't mind seeking help from others. He proves to be a true mentor, and one of the few who become a Force Ghost and guide Luke Skywalker.",
 	    "stats":[
          	5,
          	2,
@@ -241,7 +241,7 @@ var friendsList = [
 		"name":"Han Solo",
 	    "pic":"images/hansolo.jpg",
 	    "type":"Star Wars",
-	    "description":"Han Solo is an impulsive, charming con-artist, but also someone who would fight for the greater good. Though reluctant at first and prone to fleeing, when needed, he would jump to action with his trusty friend Chewy, no matter what the cost. His Millenium Falcon is his most prized possession.",
+	    "description":"Han Solo is an impulsive, charming, con-artist, but also someone who would fight for the greater good. Though reluctant at first, and prone to fleeing, he would jump to action with his trusty friend Chewy when needed, no matter what the cost. The Millennium Falcon is his most prized possession.",
 	    "stats":[
          	4,
          	4,

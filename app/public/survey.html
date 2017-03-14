@@ -314,7 +314,7 @@
           // Data received from res.json in apiRoutes.js
           $("#kindredName").html("<strong>" + data.name + "</strong>");
           $("#kindredPhoto").attr("src", data.pic);
-          $("#kindredDescription").text(data.description);
+          $("#kindredDescription").text("Character profile: " + data.description);
            $('#resultsModal').modal('show');
         });
   });
