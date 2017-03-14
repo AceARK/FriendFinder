@@ -16,6 +16,6 @@ Choose a movie, fill out the survey, and get your matching character with their 
 ------------------
 
 ### Uses 
-### * HTML, CSS, JavaScript ###
-### * Bootstrap, JQuery ###
-### * Node.js, Express.js ###
+### - HTML, CSS, JavaScript ###
+### - Bootstrap, JQuery ###
+### - Node.js, Express.js ###
