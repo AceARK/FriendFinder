@@ -7,13 +7,13 @@ Your choice of movies are - Lord of The Rings, Harry Potter, X-Men, and Star War
 
 Choose a movie, fill out the survey, and get your matching character with their character analysis at the end.
 
-###Fun Features - 
+### Fun Features - 
 * Uses movie choice to change background image for ambience.
 * Character analysis below each character name and image.
 
 ------------------
 
-###Uses 
+### Uses 
 ### * HTML, CSS, JavaScript ###
 ### * Bootstrap, JQuery ###
 ### * Node.js, Express.js ###
